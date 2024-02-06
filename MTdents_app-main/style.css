@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-bg-dark-blue: #096EBB; 
+    --color-bg-light-blue: #74B0EC; 
+    --color-bg-red: #FB9999;
+    --color-bg-red: #FB9999;
+    --color-bg-green: #99FBA8;
+    --color-text-white: #FFFFFF;
+    --color-text-black: #000000;
+}
+
+body {
+    background-color: var(--color-bg-dark-blue);
+}
