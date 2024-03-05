@@ -7,30 +7,51 @@
     <title>Robin Le Requin App</title>
 </head>
 <body>
-    <main class="main">
-        <section class="top__section">
-            <img src="/assets/logo_robin_le_requin.png" alt="Logo Robin le requin" class="img__app">
-            <img src="/assets/logo_mtdent.png" alt="Logo MTDent" class="img__mtdent">
+
+    
+    
+
+    <div id="chrono" class="chrono">
+        <section id="chrono__container" class="chrono__container">
+            <p id="minute" class="chrono__minute">2</p>:
+            <p id="seconde" class="chrono__seconde">00</p>
         </section>
+        <button id="chrono__btn" class="chrono__btn">Commencer le chrono</button>
 
-        <h1 class="main__title">Bienvenue sur ton application préférée pour prendre soin de tes dents !</h1>
-
-
-        <section class="medium__section">
-            <div class="round_one">
-                <div class="round_two">
-                    <div class="round_three">
-                        <img src="" alt="" class="img_requin">
-                    </div>
-                </div>
-            </div>
+        <section id="chrono__end" class="chrono__end">
+            <h2>Félicitation</h2>
         </section>
+    </div>
 
-        <section class="bottom__section">
-            <button class="btn blue">Louise</button>
-            <button class="btn blue">Mathéo</button>
-            <button class="btn gold">Ajouter un compte</button>
-        </section>
-    </main>
+    <style>
+
+        .chrono{
+
+        }
+
+        .chrono__container{
+            
+        }
+
+        .chrono__minute{
+            
+        }
+
+        .chrono__btn{
+            
+        }
+
+        .chrono__end{
+            display: none;
+        }
+
+    </style>
+
+    <template id="template__duree">
+        <p id="minute">{{minute}}</p>:
+        <p id="seconde">{{seconde}}</p>
+    </template>
+
+    <script src="script.js"></script>
 </body>
 </html>
