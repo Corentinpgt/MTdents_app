@@ -12,11 +12,27 @@
     
 
     <div id="chrono" class="chrono">
+
+        <section class="section__top">
+            <span class="arrow">&#60;</span>
+            <img src="/assets/logo_robin_le_requin.png" alt="img de robin le requin" class="img__accueil">
+        </section>
+
         <section id="chrono__container" class="chrono__container">
-            <p id="minute" class="chrono__minute">2</p>:
-            <p id="seconde" class="chrono__seconde">00</p>
+            <div class="chrono__1ercouche">
+                <div class="chrono__2emecouche">
+                    <p id="minute" class="chrono__timer">2</p>
+                    <p class="chrono__timer">:</p>
+                    <p id="seconde" class="chrono__timer">00</p>
+                </div>
+            </div>
         </section>
         <button id="chrono__btn" class="chrono__btn">Commencer le chrono</button>
+
+        <section class="section__compagnon">
+            <img src="/assets/quentin.png" alt="Quentin" class="img__quentin">
+            <p class="para__content">Quentin, le copain de Robin</p>
+        </section>
 
         <section id="chrono__end" class="chrono__end">
             <h2>Félicitation</h2>
@@ -48,8 +64,9 @@
     </style>
 
     <template id="template__duree">
-        <p id="minute">{{minute}}</p>:
-        <p id="seconde">{{seconde}}</p>
+        <p id="minute" class="chrono__timer">{{minute}}</p>
+        <p class="chrono__timer">:</p>
+        <p id="seconde" class="chrono__timer">{{seconde}}</p>
     </template>
 
     <script src="script.js"></script>

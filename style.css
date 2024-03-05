@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
 *,
 *::before,
 *::after {
@@ -12,10 +14,103 @@
     --color-bg-red: #FB9999;
     --color-bg-red: #FB9999;
     --color-bg-green: #99FBA8;
+    --color-bg-gold: #FFBF08;
     --color-text-white: #FFFFFF;
     --color-text-black: #000000;
+
+    --color-bg-blue-1: #3488CF;
+    --color-bg-blue-2: #5AA0E0;
+    --color-bg-blue-3: #C2E7E4;
 }
 
 body {
+    height: 100vh;
+    font-family: "Fredoka", sans-serif;
+    overflow: hidden;
     background-color: var(--color-bg-dark-blue);
+}
+
+.chrono {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5rem 2rem;
+    height: 100%;
+}
+
+.section__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow {
+    font-size: 6rem;
+    font-weight: 500;
+    color: var(--color-text-white);
+}
+
+.img__accueil {
+    width: 6rem;
+}
+
+.chrono__container {
+    width: 15rem;
+    height: 15rem;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 100%;
+    border: 5px solid var(--color-bg-blue-3);
+    background-color: var(--color-bg-blue-1);
+}
+
+.chrono__1ercouche {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 100%;
+    background-color: var(--color-bg-blue-2);
+}
+
+.chrono__2emecouche {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 100%;
+    background-color: var(--color-bg-light-blue);
+}
+
+.chrono__timer {
+    font-size: 4rem;
+    font-weight: bolder;
+    font-family: "Fredoka", sans-serif;
+    color: var(--color-text-white);
+}
+
+.section__compagnon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.img__quentin {
+    width: 10rem;
+}
+
+.para__content {
+    font-weight: 600;
+    color: var(--color-text-white);
+}
+
+
+@media screen and (min-width: 460px) {
+    .chrono__container {
+        width: 25rem;
+        height: 25rem;
+    }
 }

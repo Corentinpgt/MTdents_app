@@ -1,5 +1,5 @@
 let Chrono = {
-    time : 5,
+    time : 120,
     convert : {
         minute : 0,
         seconde : 0,
@@ -14,7 +14,6 @@ function chrono() {
             Chrono.time--;
             chronoConvert();
             chronoRender();
-            console.log(Chrono.time);
         }
         else {
             let message = document.querySelector("#chrono__end");
