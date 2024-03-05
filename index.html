@@ -7,33 +7,44 @@
     <title>Robin Le Requin App</title>
 </head>
 <body>
-    <img src="/assets/bg_nuage.png" alt="background img nuage" class="img_bgnuage">
-    <main class="main">
 
+    <main id="container"></main>
 
-        <section class="top__section">
-            <img src="/assets/logo_robin_le_requin.png" alt="Logo Robin le requin" class="img__accueil">
-            <img src="/assets/logo_mtdent.png" alt="Logo MTDent" class="img__accueil">
+    
+    <template id="template__qcm">
+        <section>
+            <figure>
+                <img src="assets/logo_robin_le_requin.png" alt="">
+            </figure>
+
+            <figure>
+                <img src="assets/Group 78.png" alt="">
+                <figcaption>{{question}}</figcaption>
+            </figure>
         </section>
 
-        <h1 class="main__title">Bienvenue sur ton application préférée pour prendre soin de tes dents !</h1>
-
-
-        <section class="medium__section">
-            <div class="round_one">
-                <div class="round_two">
-                    <div class="round_three">
-                        <img src="/assets/requin.png" alt="image de robin le requin" class="img_requin">
-                    </div>
-                </div>
-            </div>
+        <section id="qcm">
+            <ul>
+                <li class="qcm__li" data-result="{{result1}}">
+                    {{reponse1}}
+                </li>
+                <li class="qcm__li" data-result="{{result2}}">
+                    {{reponse2}}
+                </li>
+                <li class="qcm__li" data-result="{{result3}}">
+                    {{reponse3}}
+                </li>
+            </ul>
         </section>
 
-        <section class="bottom__section">
-            <button class="btn blue">Louise</button>
-            <button class="btn blue">Mathéo</button>
-            <button class="btn gold">Ajouter un compte</button>
-        </section>
-    </main>
+        <button data-next="{{next}}">
+            Question suivante
+        </button>
+    </template>
+    
+
+    
+
+    <script src="script.js"></script>
 </body>
 </html>
