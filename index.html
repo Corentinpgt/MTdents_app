@@ -27,46 +27,32 @@
                 </div>
             </div>
         </section>
-        <button id="chrono__btn" class="chrono__btn">Commencer le chrono</button>
+        <button id="chrono__btn" class="chrono__btn">
+            <img src="/assets/btn_svg.svg" alt="Button Svg">
+        </button>
 
         <section class="section__compagnon">
             <img src="/assets/quentin.png" alt="Quentin" class="img__quentin">
             <p class="para__content">Quentin, le copain de Robin</p>
         </section>
 
-        <section id="chrono__end" class="chrono__end">
-            <h2>Félicitation</h2>
+        <section id="chrono__end" class="chrono__end notview">
+            <div class="div__end">
+                <img class="cross__svg" src="/assets/croix_svg.svg" alt="Croix pour quitter">
+                <h2 class="title__end">Félicitation !</h2>
+                <p class="para_end">Tu as terminé de te brosser les dents.</p>
+            </div>
         </section>
     </div>
 
-    <style>
-
-        .chrono{
-
-        }
-
-        .chrono__container{
-            
-        }
-
-        .chrono__minute{
-            
-        }
-
-        .chrono__btn{
-            
-        }
-
-        .chrono__end{
-            display: none;
-        }
-
-    </style>
-
     <template id="template__duree">
-        <p id="minute" class="chrono__timer">{{minute}}</p>
-        <p class="chrono__timer">:</p>
-        <p id="seconde" class="chrono__timer">{{seconde}}</p>
+        <div class="chrono__1ercouche">
+            <div class="chrono__2emecouche">
+                <p id="minute" class="chrono__timer">{{minute}}</p>
+                <p class="chrono__timer">:</p>
+                <p id="seconde" class="chrono__timer">{{seconde}}</p>
+            </div>
+        </div>
     </template>
 
     <script src="script.js"></script>

@@ -3,13 +3,15 @@ let Chrono = {
     convert : {
         minute : 0,
         seconde : 0,
-    }
+    },
+    intervalID: null
 }
 
 
 function chrono() {
     
     function chronoDecr() {
+            
         if (Chrono.time > 0) {
             Chrono.time--;
             chronoConvert();
@@ -17,8 +19,10 @@ function chrono() {
         }
         else {
             let message = document.querySelector("#chrono__end");
-            message.style.display = "block";
+            message.classList.remove("notview");
+            clearInterval(Chrono.intervalID);
         }
+        console.log(Chrono);
     }
         
     function chronoConvert() {
@@ -32,8 +36,8 @@ function chrono() {
         template = template.replace("{{seconde}}",Chrono.convert.seconde);
         document.querySelector("#chrono__container").innerHTML = template;
     }
-        
-    setInterval(chronoDecr, 1000);
+    
+    Chrono.intervalID = setInterval(chronoDecr, 1000);
         
 
 }
@@ -46,3 +50,15 @@ function handlerChrono() {
 }
 
 chrono_btn.addEventListener("click", handlerChrono);
+
+
+let cross_btn = document.querySelector(".cross__svg");
+
+function handlerCrossBtn() {
+    let eltdisplay = document.querySelector("#chrono__end");
+    chrono_btn.style.display = "block";
+    eltdisplay.classList.add("notview");
+    Chrono.time = 120;
+}
+
+cross_btn.addEventListener("click", handlerCrossBtn);
