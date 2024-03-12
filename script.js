@@ -22,7 +22,6 @@ function chrono() {
             message.classList.remove("notview");
             clearInterval(Chrono.intervalID);
         }
-        console.log(Chrono);
     }
         
     function chronoConvert() {
