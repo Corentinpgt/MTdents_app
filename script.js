@@ -97,42 +97,92 @@ let qcm = {
 
 
 
-function qcmGenerator() {
-    let progression = 0;
-    function qcmQuestions() {
-        for (let i = 0; i < 4; i++) {
-            const index = Math.floor(Math.random() * qcm.liste.length);
-            qcm.questions.push(qcm.liste.splice(index, 1)[0]);
-        }
-    }
-    qcmQuestions();
-    console.log(qcm.questions);
 
-    function qcmRender() {
-        let quest = qcm.questions[progression];
-        console.log(quest);
-        let template = document.querySelector("#template__qcm").innerHTML;
-        template = template.replace("{{question}}", quest.question);
-        template = template.replace("{{result1}}", quest.reponses[0].resultat);
-        template = template.replace("{{result2}}", quest.reponses[1].resultat);
-        template = template.replace("{{result3}}", quest.reponses[2].resultat);
-        template = template.replace("{{reponse1}}", quest.reponses[0].reponse);
-        template = template.replace("{{reponse2}}", quest.reponses[1].reponse);
-        template = template.replace("{{reponse3}}", quest.reponses[2].reponse);
-        template = template.replace("{{next}}", progression+1);
-        document.querySelector("#container").innerHTML = template;
+function qcmGenerator() {
+
+  let check = 0;
+
+
+  function handlerAnswer(ev) {
+    if(check==0) {
+
+      if (ev.target.dataset.result=="true") {
+        check=1;
+        ev.target.style.backgroundColor  = "green";
+        qcm.score++;
+      }
+
+      else {
+        check=1;
+        ev.target.style.backgroundColor  = "red";
+        document.querySelectorAll(".qcm__li").forEach(li => {
+          if(li.dataset.result == "true") {
+            li.style.backgroundColor  = "green";
+          }
+
+        });
+
+      }
     }
-    qcmRender();
+
+  }
+
+  function handlerNext(ev) {
+    progression++;
+    if (progression==4) {
+      document.querySelector("#qcm__end").style.display = "block";
+    }
+    if (progression != 4) {
+      qcmRender();
+    }
+    
+  }
+
+  let progression = 0;
+  function qcmQuestions() {
+      for (let i = 0; i < 4; i++) {
+          const index = Math.floor(Math.random() * qcm.liste.length);
+          qcm.questions.push(qcm.liste.splice(index, 1)[0]);
+      }
+  }
+  qcmQuestions();
+  console.log(qcm.questions);
+
+  function qcmRender() {
+    check=0;
+    let quest = qcm.questions[progression];
+    console.log(quest);
+    let template = document.querySelector("#template__qcm").innerHTML;
+    template = template.replace("{{question}}", quest.question);
+    template = template.replace("{{result1}}", quest.reponses[0].resultat);
+    template = template.replace("{{result2}}", quest.reponses[1].resultat);
+    template = template.replace("{{result3}}", quest.reponses[2].resultat);
+    template = template.replace("{{reponse1}}", quest.reponses[0].reponse);
+    template = template.replace("{{reponse2}}", quest.reponses[1].reponse);
+    template = template.replace("{{reponse3}}", quest.reponses[2].reponse);
+    document.querySelector("#container").innerHTML = template;
+
+    
+    
+    let next = document.querySelector("#btn-next");
+    next.addEventListener("click", handlerNext);
+    if (progression==3) {
+      next.textContent = "Terminer le quizz";
+    }
 
     let answer = document.querySelectorAll(".qcm__li");
-
-    function handlerAnswer(ev) {
-        
-    }
-
     answer.forEach(answer => {
-        answer.addEventListener("click", handlerAnswer);
+      answer.addEventListener("click", handlerAnswer);
     });
+
+  }
+  qcmRender();
+
+
+  
+
+
+
 }
 
 qcmGenerator();
