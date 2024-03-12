@@ -38,7 +38,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2.5rem 2rem;
+    padding: 1rem 2rem;
     height: 100%;
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .arrow {
-    font-size: 6rem;
+    font-size: 3.5rem;
     font-weight: 500;
     color: var(--color-text-white);
 }
@@ -63,7 +63,7 @@ body {
     height: 15rem;
     margin: 0 auto;
     padding: 1rem;
-    border-radius: 100%;
+    border-radius: 50%;
     border: 5px solid var(--color-bg-blue-3);
     background-color: var(--color-bg-blue-1);
 }
@@ -77,7 +77,7 @@ body {
     width: 100%;
     height: 100%;
     padding: 1rem;
-    border-radius: 100%;
+    border-radius: 50%;
     background-color: var(--color-bg-blue-2);
 }
 
@@ -88,7 +88,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    border-radius: 100%;
+    border-radius: 50%;
     background-color: var(--color-bg-light-blue);
 }
 
@@ -130,7 +130,7 @@ body {
 }
 
 .img__quentin {
-    width: auto;
+    width: 5rem;
     height: auto;
 }
 
