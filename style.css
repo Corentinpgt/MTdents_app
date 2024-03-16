@@ -22,7 +22,6 @@
 body {
     height: 100vh;
     font-family: "Fredoka", sans-serif;
-    overflow: hidden;
     background-color: var(--color-bg-dark-blue);
 }
 
