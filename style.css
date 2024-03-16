@@ -152,7 +152,7 @@ body {
 
 
 .qcm__end {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -188,8 +188,4 @@ body {
     font-size: 2rem;
     font-weight: 500;
     color: var(--color-bg-blue-1);
-}
-
-.notview {
-    display: none;
 }

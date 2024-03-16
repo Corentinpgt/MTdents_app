@@ -109,7 +109,7 @@ function qcmGenerator() {
         ev.target.style.backgroundColor = "green";
         qcm.score++;
       }
-
+      
       else {
         check = 1;
         ev.target.style.backgroundColor = "red";
@@ -117,12 +117,12 @@ function qcmGenerator() {
           if (li.dataset.result == "true") {
             li.style.backgroundColor = "green";
           }
-
+          
         });
-
+        
       }
     }
-
+    
   }
 
   function handlerNext(ev) {
@@ -130,18 +130,22 @@ function qcmGenerator() {
     if (check != 0) {
       progression++;
       if (progression == 4) {
+        qcmRender();
         document.querySelector("#qcm__end").style.display = "flex";
       }
-      if (progression != 4) {
+      else {
         qcmRender();
       }
+      /* if (progression != 4) {
+        qcmRender();
+      } */
     }
 
   }
 
   let progression = 0;
   function qcmQuestions() {
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 5; i++) {
       const index = Math.floor(Math.random() * qcm.liste.length);
       qcm.questions.push(qcm.liste.splice(index, 1)[0]);
     }
@@ -177,11 +181,21 @@ function qcmGenerator() {
     }
 
 
+
+    let cross = document.querySelector("#cross__svg");
+    cross.addEventListener("click", handlerCrossBtn);
+
+    function handlerCrossBtn() {
+      document.querySelector("#qcm__end").style.display = "none";
+      progression = 0;
+      qcm.score = 0;
+      qcmRender();
+    }
+
   }
 
   function conversionScore(score) {
     let calculScore = (score * 10) / 4;
-    console.log(score);
     return text = `${calculScore}/10`;
   }
 
@@ -189,37 +203,27 @@ function qcmGenerator() {
     let message = "";
     let calculScore = (score * 10) / 4;
     if (calculScore > 0) {
-      message = "c'est bof bof";
-      
+      message = "C'est pas super génial.";
+
       if (calculScore == 5) {
-        message = "pile poil la moyenne. C'est moyen";
+        message = "C'est moyen, ni trop bien ni trop mal.";
       }
       else if (calculScore == 10) {
-        message = "Excellent tu n'as aucune faute";
+        message = "Bravo ! Tu n'as commis aucune erreur !";
       }
       else {
-        message = "bien joué, c'est une bonne note";
+        message = "C'est pas mal du tout ! C'est une bonne note !";
       }
     }
     else {
-      message = "Ce n'est pas bon, il faut refaire le questionnaire";
+      message = "Oops, quelque chose ne va pas.";
     }
 
     return message;
   }
-  
-  qcmRender();
 
+
+  qcmRender();
 }
 
 qcmGenerator();
-
-
-
-document.querySelectorAll(".cross__svg").addEventListener("click", handlerCrossBtn);
-
-function handlerCrossBtn() {
-  /* let eltdisplay = document.querySelector("#qcm__end");
-  eltdisplay.classList.remove("notview"); */
-  console.log(test);
-}
