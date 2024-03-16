@@ -91,10 +91,9 @@ let qcm = {
       ],
     },
   ],
-  questions : [],
-  score : 0,
+  questions: [],
+  score: 0,
 };
-
 
 
 
@@ -102,22 +101,21 @@ function qcmGenerator() {
 
   let check = 0;
 
-
   function handlerAnswer(ev) {
-    if(check==0) {
+    if (check == 0) {
 
-      if (ev.target.dataset.result=="true") {
-        check=1;
-        ev.target.style.backgroundColor  = "green";
+      if (ev.target.dataset.result == "true") {
+        check = 1;
+        ev.target.style.backgroundColor = "green";
         qcm.score++;
       }
 
       else {
-        check=1;
-        ev.target.style.backgroundColor  = "red";
+        check = 1;
+        ev.target.style.backgroundColor = "red";
         document.querySelectorAll(".qcm__li").forEach(li => {
-          if(li.dataset.result == "true") {
-            li.style.backgroundColor  = "green";
+          if (li.dataset.result == "true") {
+            li.style.backgroundColor = "green";
           }
 
         });
@@ -128,31 +126,33 @@ function qcmGenerator() {
   }
 
   function handlerNext(ev) {
-    progression++;
-    if (progression==4) {
-      document.querySelector("#qcm__end").style.display = "block";
+
+    if (check != 0) {
+      progression++;
+      if (progression == 4) {
+        document.querySelector("#qcm__end").style.display = "flex";
+      }
+      if (progression != 4) {
+        qcmRender();
+      }
     }
-    if (progression != 4) {
-      qcmRender();
-    }
-    
+
   }
 
   let progression = 0;
   function qcmQuestions() {
-      for (let i = 0; i < 4; i++) {
-          const index = Math.floor(Math.random() * qcm.liste.length);
-          qcm.questions.push(qcm.liste.splice(index, 1)[0]);
-      }
+    for (let i = 0; i < 4; i++) {
+      const index = Math.floor(Math.random() * qcm.liste.length);
+      qcm.questions.push(qcm.liste.splice(index, 1)[0]);
+    }
   }
   qcmQuestions();
-  console.log(qcm.questions);
 
   function qcmRender() {
-    check=0;
+    check = 0;
     let quest = qcm.questions[progression];
-    console.log(quest);
     let template = document.querySelector("#template__qcm").innerHTML;
+    template = template.replace("{{progression}}", progression + 1);
     template = template.replace("{{question}}", quest.question);
     template = template.replace("{{result1}}", quest.reponses[0].resultat);
     template = template.replace("{{result2}}", quest.reponses[1].resultat);
@@ -160,26 +160,66 @@ function qcmGenerator() {
     template = template.replace("{{reponse1}}", quest.reponses[0].reponse);
     template = template.replace("{{reponse2}}", quest.reponses[1].reponse);
     template = template.replace("{{reponse3}}", quest.reponses[2].reponse);
+    template = template.replace("{{score}}", conversionScore(qcm.score));
+    template = template.replace("{{text}}", textPersonalise(qcm.score));
     document.querySelector("#container").innerHTML = template;
 
-    
-    
-    let next = document.querySelector("#btn-next");
-    next.addEventListener("click", handlerNext);
-    if (progression==3) {
-      next.textContent = "Terminer le quizz";
-    }
 
     let answer = document.querySelectorAll(".qcm__li");
     answer.forEach(answer => {
       answer.addEventListener("click", handlerAnswer);
     });
 
+    let next = document.querySelector("#btn-next");
+    next.addEventListener("click", handlerNext);
+    if (progression == 3) {
+      next.textContent = "Terminer le quizz";
+    }
+
+
   }
+
+  function conversionScore(score) {
+    let calculScore = (score * 10) / 4;
+    console.log(score);
+    return text = `${calculScore}/10`;
+  }
+
+  function textPersonalise(score) {
+    let message = "";
+    let calculScore = (score * 10) / 4;
+    if (calculScore > 0) {
+      message = "c'est bof bof";
+      
+      if (calculScore == 5) {
+        message = "pile poil la moyenne. C'est moyen";
+      }
+      else if (calculScore == 10) {
+        message = "Excellent tu n'as aucune faute";
+      }
+      else {
+        message = "bien joué, c'est une bonne note";
+      }
+    }
+    else {
+      message = "Ce n'est pas bon, il faut refaire le questionnaire";
+    }
+
+    return message;
+  }
+
+
   qcmRender();
 
 
-  
+  let cross_btn = document.querySelector(".cross__svg");
+
+  function handlerCrossBtn() {
+    let eltdisplay = document.querySelector("#qcm__end");
+    eltdisplay.classList.remove("notview");
+  }
+
+  cross_btn.addEventListener("click", handlerCrossBtn);
 
 
 
