@@ -207,22 +207,19 @@ function qcmGenerator() {
 
     return message;
   }
-
-
+  
   qcmRender();
-
-
-  let cross_btn = document.querySelector(".cross__svg");
-
-  function handlerCrossBtn() {
-    let eltdisplay = document.querySelector("#qcm__end");
-    eltdisplay.classList.remove("notview");
-  }
-
-  cross_btn.addEventListener("click", handlerCrossBtn);
-
-
 
 }
 
 qcmGenerator();
+
+
+
+document.querySelectorAll(".cross__svg").addEventListener("click", handlerCrossBtn);
+
+function handlerCrossBtn() {
+  /* let eltdisplay = document.querySelector("#qcm__end");
+  eltdisplay.classList.remove("notview"); */
+  console.log(test);
+}

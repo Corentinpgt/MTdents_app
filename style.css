@@ -166,7 +166,7 @@ body {
 .div__end {
     position: relative;
     width: 80%;
-    padding: 5rem;
+    padding: 4rem;
     text-align: center;
     background-color: var(--color-text-white);
     color: var(--color-text-black);
