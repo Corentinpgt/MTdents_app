@@ -1,72 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Robin Le Requin App</title>
 </head>
-
 <body>
+
+    <!-- <button id="btn-back"><img src="assets/arrow-back.svg" alt=""></button> -->
 
     <main id="container"></main>
 
-
-    <template id="template__qcm">
-
-        <section class="section__title">
-            <section class="section__top">
-                <span class="arrow">&#60;</span>
-                <img src="/assets/logo_robin_le_requin.png" alt="img de robin le requin" class="img__accueil">
-            </section>
-            <h2 class="h2__title">Le quizz des dents</h2>
-            <h3 class="h3_sous_title">Question {{progression}}</h3>
-        </section>
-
-        <figure class="figure_img">
-            <section class="medium__section">
-                <div class="round_one">
-                    <div class="round_two">
-                        <div class="round_three">
-                            <img src="/assets/requin.png" alt="image de robin le requin" class="img_requin">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <figcaption class="figcaption_content">{{question}}</figcaption>
-        </figure>
-
-        <section id="qcm">
-            <ul class="ul_qcm">
-                <li class="qcm__li" data-result="{{result1}}">
-                    {{reponse1}}
-                </li>
-                <li class="qcm__li" data-result="{{result2}}">
-                    {{reponse2}}
-                </li>
-                <li class="qcm__li" data-result="{{result3}}">
-                    {{reponse3}}
-                </li>
-                <li class="btn-next" id="btn-next">
-                    Question suivante
-                </li>
-            </ul>
-        </section>
-
-
-
-        <section id="qcm__end" class="qcm__end">
-            <div class="div__end">
-                <img class="cross__svg" id="cross__svg" src="/assets/croix_svg.svg" alt="Croix pour quitter">
-                <h2 class="title__end">Félicitation !</h2>
-                <p class="para_end">Tu as finis le questionnaire. Tu as <span class="span__score">{{score}}</span></p>
-                <p class="para_end">{{text}}</p>
-            </div>
+    
+    <template id="template__info-cell">
+        <section data-id="{{id}}" class="cell">
+            <img data-id="{{id}}" src="{{src}}" alt="logo info">
+            <p data-id="{{id}}" >{{title}}</p>
         </section>
     </template>
 
+    <template  id="template__info">
+        <h2>{{title}}</h2>
+        <p>{{info}}</p>
+    </template>
+
+    <style>
+
+    </style>
+    
+
+    
+
     <script src="script.js"></script>
 </body>
-
 </html>
