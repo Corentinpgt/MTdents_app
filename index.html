@@ -3,50 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
     <title>Robin Le Requin App</title>
 </head>
 <body>
-    <img src="/assets/bg_nuage.png" alt="background img nuage" class="img_bgnuage">
-    <main class="main">
 
+    <div id="container"></div>
 
-        <section class="top__section">
-            <img src="/assets/logo_robin_le_requin.png" alt="Logo Robin le requin" class="img__accueil">
-            <img src="/assets/logo_mtdent.png" alt="Logo MTDent" class="img__accueil">
-        </section>
+    <template id="login">
 
-        <h1 class="main__title">Bienvenue sur ton application préférée pour prendre soin de tes dents !</h1>
-
-
-        <section class="medium__section">
-            <div class="round_one">
-                <div class="round_two">
-                    <div class="round_three">
-                        <img src="/assets/requin.png" alt="image de robin le requin" class="img_requin">
+        <img src="/assets/bg_nuage.png" alt="background img nuage" class="img_bgnuage">
+        <main class="main">
+    
+    
+            <section class="top__section">
+                <img src="/assets/logo_robin_le_requin.png" alt="Logo Robin le requin" class="img__accueil">
+                <img src="/assets/logo_mtdent.png" alt="Logo MTDent" class="img__accueil">
+            </section>
+    
+            <h1 class="main__title">Bienvenue sur ton application préférée pour prendre soin de tes dents !</h1>
+    
+    
+            <section class="medium__section">
+                <div class="round_one">
+                    <div class="round_two">
+                        <div class="round_three">
+                            <img src="/assets/requin.png" alt="image de robin le requin" class="img_requin">
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+    
+            <section class="bottom__section">
+                <label for="age">Quel est ton age</label>
+                <select name="age" id="age">
+                    <option value="3">3 ans</option>
+                    <option value="4">4 ans</option>
+                    <option value="5">5 ans</option>
+                    <option value="6">6 ans</option>
+                    <option value="7">7 ans</option>
+                    <option value="8">8 ans</option>
+                    <option value="9">9 ans</option>
+                    <option value="10">10 ans</option>
+                    <option value="11">11 ans</option>
+                    <option value="12">12 ans</option>
+                </select>
+                <input id="name" type="text" placeholder="Quel est ton nom ?">
+                <button id="btn-createAccount" class="btn gold">Créer mon compte</button>
+            </section>
+        </main>
 
-        <section class="bottom__section">
-            <label for="age">Quel est ton age</label>
-            <select name="age" id="age">
-                <option value="3">3 ans</option>
-                <option value="4">4 ans</option>
-                <option value="5">5 ans</option>
-                <option value="6">6 ans</option>
-                <option value="7">7 ans</option>
-                <option value="8">8 ans</option>
-                <option value="9">9 ans</option>
-                <option value="10">10 ans</option>
-                <option value="11">11 ans</option>
-                <option value="12">12 ans</option>
-            </select>
-            <input id="name" type="text" placeholder="Quel est ton nom ?">
-            <button id="btn-createAccount" class="btn gold">Créer mon compte</button>
-        </section>
-    </main>
+    </template>
+
+
+    <template id="chrono">
+
+        <div id="chrono" class="chrono">
+
+            <section class="section__top">
+                <span id="backArrow" class="arrow">&#60;</span>
+                <img src="/assets/logo_robin_le_requin.png" alt="img de robin le requin" class="img__accueil">
+            </section>
+    
+            <section id="chrono__container" class="chrono__container">
+                <div class="chrono__1ercouche">
+                    <div class="chrono__2emecouche">
+                        <p id="minute" class="chrono__timer">2</p>
+                        <p class="chrono__timer">:</p>
+                        <p id="seconde" class="chrono__timer">00</p>
+                    </div>
+                </div>
+            </section>
+            <button id="chrono__btn" class="chrono__btn">
+                <img src="/assets/btn_svg.svg" alt="Button Svg">
+            </button>
+    
+            <section class="section__compagnon">
+                <img src="/assets/quentin.png" alt="Quentin" class="img__quentin">
+                <p class="para__content">Quentin, le copain de Robin</p>
+            </section>
+    
+            <section id="chrono__end" class="chrono__end notview">
+                <div class="div__end">
+                    <img class="cross__svg" src="/assets/croix_svg.svg" alt="Croix pour quitter">
+                    <h2 class="title__end">Félicitation !</h2>
+                    <p class="para_end">Tu as terminé de te brosser les dents.</p>
+                </div>
+            </section>
+        </div>
+    
+        <template id="template__duree">
+            <div class="chrono__1ercouche">
+                <div class="chrono__2emecouche">
+                    <p id="minute" class="chrono__timer">{{minute}}</p>
+                    <p class="chrono__timer">:</p>
+                    <p id="seconde" class="chrono__timer">{{seconde}}</p>
+                </div>
+            </div>
+        </template>
+
+    </template>
 
     <script src="script.js"></script>
 </body>
