@@ -42,9 +42,11 @@ function chrono() {
 }
 
 let chrono_btn = document.querySelector("#chrono__btn");
+let chro = document.querySelector("#chrono__container");
 
 function handlerChrono() {
-    chrono_btn.style.display = "none";
+    chrono_btn.classList.add("chrono__btn_anim");
+    chro.classList.add("chrono__container_anim");
     chrono();
 }
 
