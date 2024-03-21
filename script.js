@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 let data = [
     {
         id : 1,
@@ -89,4 +87,3 @@ function infoGenerator() {
     });
 }
 infoGenerator();
->>>>>>> 0d25441b98fec981b6bbc2130f07d4dfe269316c
