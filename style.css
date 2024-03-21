@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
-
 *,
 *::before,
 *::after {
@@ -14,38 +12,61 @@
     --color-bg-red: #FB9999;
     --color-bg-red: #FB9999;
     --color-bg-green: #99FBA8;
-    --color-bg-gold: #FFBF08;
     --color-text-white: #FFFFFF;
     --color-text-black: #000000;
 }
 
 body {
-    height: 100vh;
-    font-family: "Fredoka", sans-serif;
     background-color: var(--color-bg-dark-blue);
 }
+<<<<<<< HEAD
 
-.main {
-    position: relative;
+.section__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2.5rem 2rem;
+    /* padding: 1rem 2rem; */
     height: 100%;
 }
 
-.main__title {
-    text-align: center;
-    color: var(--color-text-white);
+.section__title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
 }
 
-.top__section {
+.section__content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 2rem;
+    background-color: var(--color-text-white);
 }
 
 .img__accueil {
-    width: 6rem;
+    width: 3rem;
+}
+
+.img_nuage {
+    position: absolute;
+    top: 4.5rem;
+    width: 80%;
+}
+
+.figure_img {
+    width: 100%;
+    gap: .5rem;
 }
 
 .medium__section {
@@ -53,66 +74,89 @@ body {
     justify-content: center;
 }
 
-.img_requin {
-    width: 19rem;
-    z-index: 10;
+.figcaption_content {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    gap: 3rem;
+    width: 90%;
+    padding: 1rem .75rem 1rem 0;
+    border-radius: 20rem 5rem 5rem 20rem;
+    outline: 8px solid #ACD0F4;
+    font-size: .75rem;
+    text-align: center;
+    font-weight: 500;
+    background-color: var(--color-text-white);
+    color: var(--color-text-black);
 }
 
-.bottom__section {
+.img_requin {
+    position: absolute;
+    left: -.5rem;
+    top: -.5rem;
+    width: 7.85rem;
+}
+
+.div_profil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.para_profil {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.ul__btns {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.li__btn {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-.btn {
-    padding: 1rem 2rem;
-    border-radius: 5rem;
-    border: none;
-    font-family: "Fredoka", sans-serif;
-    font-weight: bolder;
-    font-size: 1.5rem;
-    color: var(--color-text-white);
+    align-items: center;
+    padding: .5rem;
+    gap: 1rem;
+    border-radius: 20rem;
+    background-color: var(--color-bg-light-blue);
     cursor: pointer;
 }
 
-.blue {
-    background-color: var(--color-bg-light-blue);
-}
-.blue:hover {
+.li__btn:hover {
     box-shadow: 1px 1px 20px var(--color-bg-light-blue);
 }
 
-.gold {
-    background-color: var(--color-bg-gold);
-}
-.gold:hover {
-    box-shadow: 1px 1px 20px var(--color-bg-gold);
-}
-
-.img_bgnuage {
-    position: absolute;
-    top: 25%;
-    width: 100%;
-    z-index: -1;
+.div__svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 49px;
+    height: 49px;
+    border-radius: 20rem;
+    padding: .5rem;
+    background-color: var(--color-bg-dark-blue);
 }
 
-@media screen and (min-width: 500px) {
-    .img_bgnuage {
-        top: 0;
-    }
-
-    .img_requin {
-        width: 25rem;
-    }
+.p__btn {
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
-@media screen and (min-width: 768px) {
-    .img_bgnuage {
-        top: -5rem;
-    }
 
-    .img_requin {
+@media screen and (min-width: 600px) {
+    .figcaption_content {
         width: 30rem;
     }
+
+    .ul__btns {
+        width: 35rem;
+    }
 }
+=======
+>>>>>>> 0d25441b98fec981b6bbc2130f07d4dfe269316c

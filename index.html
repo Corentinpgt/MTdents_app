@@ -7,46 +7,79 @@
     <title>Robin Le Requin App</title>
 </head>
 <body>
-    <img src="/assets/bg_nuage.png" alt="background img nuage" class="img_bgnuage">
-    <main class="main">
 
+<<<<<<< HEAD
+    <main id="container">
+        <section class="section__title">
+            <section class="section__top">
+                <img src="/assets/logo_robin_le_requin.png" alt="img de robin le requin" class="img__accueil">
+                <img src="/assets/logo_profil.svg" alt="img profil" class="img__accueil">
+            </section>
+            
+            <img class="img_nuage" src="/assets/nuage_bg.png" alt="Nuage img background">
 
-        <section class="top__section">
-            <img src="/assets/logo_robin_le_requin.png" alt="Logo Robin le requin" class="img__accueil">
-            <img src="/assets/logo_mtdent.png" alt="Logo MTDent" class="img__accueil">
-        </section>
+            <figure class="figure_img">
+                <section class="medium__section">
+                    <figcaption class="figcaption_content">
 
-        <h1 class="main__title">Bienvenue sur ton application préférée pour prendre soin de tes dents !</h1>
-
-
-        <section class="medium__section">
-            <div class="round_one">
-                <div class="round_two">
-                    <div class="round_three">
                         <img src="/assets/requin.png" alt="image de robin le requin" class="img_requin">
-                    </div>
-                </div>
-            </div>
+                        <div class="div_profil">
+                            <p class="para_profil">Matheo</p>
+                            <p class="para_profil">5 ans</p>
+                        </div>
+                    </figcaption>
+                </section>
+            </figure>
         </section>
 
-        <section class="bottom__section">
-            <label for="age">Quel est ton age</label>
-            <select name="age" id="age">
-                <option value="3">3 ans</option>
-                <option value="4">4 ans</option>
-                <option value="5">5 ans</option>
-                <option value="6">6 ans</option>
-                <option value="7">7 ans</option>
-                <option value="8">8 ans</option>
-                <option value="9">9 ans</option>
-                <option value="10">10 ans</option>
-                <option value="11">11 ans</option>
-                <option value="12">12 ans</option>
-            </select>
-            <input id="name" type="text" placeholder="Quel est ton nom ?">
-            <button id="btn-createAccount" class="btn gold">Créer mon compte</button>
+        <section class="section__content">
+            <ul class="ul__btns">
+                <li class="li__btn">
+                    <div class="div__svg">
+                        <img src="/assets/logo_chronometre.svg" alt="Svg Logo Chronometre">
+                    </div>
+                    <p class="p__btn">Mon chronomètre</p>
+                </li>
+                <li class="li__btn">
+                    <div class="div__svg">
+                        <img src="/assets/logo_sante.svg" alt="Svg Logo Sante">
+                    </div>
+                    <p class="p__btn">Informations cool</p>
+                </li>
+                <li class="li__btn">
+                    <div class="div__svg">
+                        <img src="/assets/logo_dent.svg" alt="Svg Logo Dent">
+                    </div>
+                    <p class="p__btn">Le quizz des dents</p>
+                </li>
+            </ul>
         </section>
     </main>
+=======
+    <!-- <button id="btn-back"><img src="assets/arrow-back.svg" alt=""></button> -->
+
+    <main id="container"></main>
+
+    
+    <template id="template__info-cell">
+        <section data-id="{{id}}" class="cell">
+            <img data-id="{{id}}" src="{{src}}" alt="logo info">
+            <p data-id="{{id}}" >{{title}}</p>
+        </section>
+    </template>
+>>>>>>> 0d25441b98fec981b6bbc2130f07d4dfe269316c
+
+    <template  id="template__info">
+        <h2>{{title}}</h2>
+        <p>{{info}}</p>
+    </template>
+
+    <style>
+
+    </style>
+    
+
+    
 
     <script src="script.js"></script>
 </body>
