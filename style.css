@@ -14,15 +14,24 @@
     --color-bg-green: #99FBA8;
     --color-text-white: #FFFFFF;
     --color-text-black: #000000;
+    --color-shadow: rgba(0, 0, 0, 0.35);
 }
 
 body {
-    background-color: var(--color-bg-dark-blue);
+    position: relative;
+    height: 100vh;
+    font-family: "Fredoka", sans-serif;
+    background-color: var(--color-text-white);
+}
+
+.main {
+    position: relative;
+    height: 100%;
 }
 
 .section__top {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -38,9 +47,9 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 6rem;
-    padding: 1rem 2rem;
-    margin-bottom: 2rem;
+    gap: 2rem;
+    padding: 1rem 2rem 4rem 2rem;
+    background-color: var(--color-bg-dark-blue);
 }
 
 .section__content {
@@ -54,34 +63,27 @@ body {
 }
 
 .img__accueil {
-    width: 3rem;
+    width: 4rem;
 }
 
 .img_nuage {
     position: absolute;
-    top: 4.5rem;
+    top: 2.5rem;
     width: 80%;
+    z-index: 0;
 }
 
 .figure_img {
-    width: 100%;
-    gap: .5rem;
-}
-
-.medium__section {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: .5rem;
 }
 
 .figcaption_content {
     position: relative;
-    display: flex;
-    justify-content: end;
-    gap: 3rem;
-    width: 90%;
-    padding: 1rem .75rem 1rem 0;
-    border-radius: 20rem 5rem 5rem 20rem;
-    outline: 8px solid #ACD0F4;
+    padding: 1.5rem .75rem;
+    border-radius: 2.5rem;
     font-size: .75rem;
     text-align: center;
     font-weight: 500;
@@ -89,14 +91,56 @@ body {
     color: var(--color-text-black);
 }
 
-.img_requin {
+.figcaption_content::before {
+    content: url('assets/languette_bulle.svg');
     position: absolute;
-    left: -.5rem;
-    top: -.5rem;
-    width: 7.85rem;
+    top: 1rem;
+    left: -1.25rem;
+    z-index: 1;
 }
 
-.div_profil {
+.medium__section {
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.img_requin {
+    width: 7rem;
+    z-index: 10;
+}
+
+.container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 14rem;
+    height: 100%;
+    width: 100%;
+    gap: 2rem;
+}
+
+.cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0px 5px 15px var(--color-shadow);
+    border-radius: 2rem;
+    background-color: var(--color-text-white);
+    cursor: pointer;
+}
+
+.img__cell {
+    width: 4rem;
+}
+
+/* .div_profil {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -145,7 +189,7 @@ body {
 .p__btn {
     font-size: 1.25rem;
     font-weight: 700;
-}
+} */
 
 
 @media screen and (min-width: 600px) {
