@@ -1,7 +1,3 @@
-.container {
-    height: 100%;
-}
-
 .section__top {
     display: flex;
     justify-content: space-between;
@@ -24,11 +20,11 @@
     background-color: var(--color-text-white);
 }
 
-.img__accueil {
+.main__img__accueil {
     width: 4rem;
 }
 
-.img_nuage {
+.main__img_nuage {
     position: absolute;
     top: 4.5rem;
     width: 80%;
@@ -56,11 +52,11 @@
     color: var(--color-text-black);
 }
 
-.img_requin {
+.main__img_requin {
     position: absolute;
     left: -10px;
     top: -5px;
-    width: 8.5rem;
+    width: 6rem;
     z-index: 10;
 }
 

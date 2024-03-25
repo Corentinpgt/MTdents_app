@@ -33,3 +33,7 @@ body {
     overflow: hidden;
     background-color: var(--color-bg-dark-blue);
 }
+
+#container {
+    height: 100%;
+}
