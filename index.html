@@ -10,7 +10,58 @@
 
     <div id="container"></div>
 
-    <template id="login">
+    <!-- Start -->
+    <template id="mainPage">
+        <main class="container">
+            <section class="section__title">
+                <section class="section__top">
+                    <img src="/assets/logo_robin_le_requin.png" alt="img de robin le requin" class="img__accueil">
+                    <img src="/assets/logo_profil.svg" alt="img profil" class="img__accueil">
+                </section>
+    
+                <img class="img_nuage" src="/assets/nuage_bg.png" alt="Nuage img background">
+    
+                <figure class="figure_img">
+                    <figcaption class="figcaption_content">
+    
+                        <img src="/assets/requin.png" alt="image de robin le requin" class="img_requin">
+                        <template id="profile">
+                            <p class="para_profil">{{name}}</p>
+                            <p class="para_profil">{{age}} ans</p>
+                        </template>
+                        <div class="div_profil" id="profile_container"></div>
+                    </figcaption>
+                </figure>
+            </section>
+
+            <button id="delete">Changer de compte</button>
+    
+            <section class="section__content">
+                <ul class="ul__btns">
+                    <li id="chrono" class="li__btn">
+                        <div class="div__svg">
+                            <img src="/assets/logo_chronometre.svg" alt="Svg Logo Chronometre">
+                        </div>
+                        <p class="p__btn">Mon chronomètre</p>
+                    </li>
+                    <li id="info" class="li__btn">
+                        <div class="div__svg">
+                            <img src="/assets/logo_sante.svg" alt="Svg Logo Sante">
+                        </div>
+                        <p class="p__btn">Informations cool</p>
+                    </li>
+                    <li id="quizz" class="li__btn">
+                        <div class="div__svg">
+                            <img src="/assets/logo_dent.svg" alt="Svg Logo Dent">
+                        </div>
+                        <p class="p__btn">Le quizz des dents</p>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </template>
+
+    <template id="loginPage">
 
         <img src="/assets/bg_nuage.png" alt="background img nuage" class="img_bgnuage">
         <main class="main">
@@ -55,8 +106,7 @@
 
     </template>
 
-
-    <template id="chrono">
+    <template id="chronoPage">
 
         <div id="chrono" class="chrono">
 
@@ -102,6 +152,103 @@
             </div>
         </template>
 
+    </template>
+
+    <template id="qcmPage">
+
+        <div id="qcm__container"></div>
+
+        <template id="qcm__template">
+            <section class="section__title">
+                <section class="section__top">
+                    <span id="backArrow" class="arrow">&#60;</span>
+                    <img src="/assets/logo_robin_le_requin.png" alt="img de robin le requin" class="img__accueil">
+                </section>
+                <h2 class="h2__title">Le quizz des dents</h2>
+                <h3 class="h3_sous_title">Question {{progression}}</h3>
+            </section>
+    
+            <figure class="figure_img">
+                <section class="medium__section">
+                    <div class="round_one">
+                        <div class="round_two">
+                            <div class="round_three">
+                                <img src="/assets/requin.png" alt="image de robin le requin" class="img_requin">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <figcaption class="figcaption_content">{{question}}</figcaption>
+            </figure>
+    
+            <section id="qcm">
+                <ul class="ul_qcm">
+                    <li class="qcm__li" data-result="{{result1}}">
+                        {{reponse1}}
+                    </li>
+                    <li class="qcm__li" data-result="{{result2}}">
+                        {{reponse2}}
+                    </li>
+                    <li class="qcm__li" data-result="{{result3}}">
+                        {{reponse3}}
+                    </li>
+                    <li class="btn-next" id="btn-next">
+                        Question suivante
+                    </li>
+                </ul>
+            </section>
+    
+    
+    
+            <section id="qcm__end" class="qcm__end">
+                <div class="div__end">
+                    <img class="cross__svg" id="cross__svg" src="/assets/croix_svg.svg" alt="Croix pour quitter">
+                    <h2 class="title__end">Félicitation !</h2>
+                    <p class="para_end">Tu as finis le questionnaire. Tu as <span class="span__score">{{score}}</span></p>
+                    <p class="para_end">{{text}}</p>
+                </div>
+            </section>
+        </template>
+    </template>
+
+    <template id="infoPage">
+
+        <main class="main">
+            <section class="section__title">
+                <section class="section__top">
+                    <span id="backArrow" class="arrow">&#60;</span>
+                    <img src="/assets/logo_robin_le_requin.png" alt="img de robin le requin" class="img__accueil">
+                </section>
+    
+                <img class="img_nuage" src="/assets/nuage_bg.png" alt="Nuage img background">
+    
+                <figure class="figure_img">
+                    <section class="medium__section">
+                        <img src="/assets/requin.png" alt="image de robin le requin" class="img_requin">
+                    </section>
+                    <figcaption class="figcaption_content">Tu souhaites te renseigner sur quoi ?</figcaption>
+                </figure>
+            </section>
+    
+            <section class="container" id="info__container"></section>
+    
+        </main>
+    
+    
+        <template id="template__info-cell">
+            <section data-id="{{id}}" class="cell">
+                <div class="cell_group">
+                    <img class="img__cell" data-id="{{id}}" src="{{src}}" alt="logo info">
+                </div>
+                <p data-id="{{id}}">{{title}}</p>
+            </section>
+        </template>
+    
+        <template id="template__info">
+            <span id="infoArrow" class="arrow">&#60;</span>
+            <h2 class="title_info">{{title}}</h2>
+            <p>{{info}}</p>
+        </template>
     </template>
 
     <script src="script.js"></script>
