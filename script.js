@@ -2,7 +2,7 @@ let data = [
     {
         id : 1,
         cell : {
-            img : "assets/icon.svg", // Ignoré car nous ne nous préoccupons pas de l'image
+            img : "assets/logo_dent.svg", // Ignoré car nous ne nous préoccupons pas de l'image
             title : "Introduction aux dents"
         },
         info : {
@@ -13,7 +13,7 @@ let data = [
     {
         id : 2,
         cell : {
-            img : "assets/plus.svg", // Ignoré car nous ne nous préoccupons pas de l'image
+            img : "assets/logo_sugar.svg", // Ignoré car nous ne nous préoccupons pas de l'image
             title : "Comment prendre soin de ses dents"
         },
         info : {
@@ -24,7 +24,7 @@ let data = [
     {
         id : 3,
         cell : {
-            img : "assets/plus.svg", // Ignoré car nous ne nous préoccupons pas de l'image
+            img : "assets/logo_dent.svg", // Ignoré car nous ne nous préoccupons pas de l'image
             title : "Visite chez le dentiste"
         },
         info : {
@@ -35,7 +35,7 @@ let data = [
     {
         id : 4,
         cell : {
-            img : "assets/sugar-cane.svg", // Ignoré car nous ne nous préoccupons pas de l'image
+            img : "assets/logo_couvert.svg", // Ignoré car nous ne nous préoccupons pas de l'image
             title : "Les aliments pour des dents en bonne santé"
         },
         info : {
@@ -63,10 +63,12 @@ function infoGenerator() {
         container.innerHTML=result;
     }
     cellGenerator();
-
+    
     function pageGenerator(obj) {
         let item = obj.info;
         container.innerHTML="";
+        container.classList.add('cell_container');
+        container.classList.remove('container');
         let template = document.querySelector("#template__info").innerHTML;
         template = template.replace("{{info}}", item.text);
         template = template.replace("{{title}}", item.title);

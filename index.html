@@ -81,13 +81,15 @@
 
     <template id="template__info-cell">
         <section data-id="{{id}}" class="cell">
-            <img class="img__cell" data-id="{{id}}" src="{{src}}" alt="logo info">
+            <div class="cell_group">
+                <img class="img__cell" data-id="{{id}}" src="{{src}}" alt="logo info">
+            </div>
             <p data-id="{{id}}">{{title}}</p>
         </section>
     </template>
 
     <template id="template__info">
-        <h2>{{title}}</h2>
+        <h2 class="title_info">{{title}}</h2>
         <p>{{info}}</p>
     </template>
 
