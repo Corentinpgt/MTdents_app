@@ -10,7 +10,7 @@
 
 <body>
 
-    <!-- <main id="container">
+    <main class="container">
         <section class="section__title">
             <section class="section__top">
                 <img src="/assets/logo_robin_le_requin.png" alt="img de robin le requin" class="img__accueil">
@@ -20,16 +20,14 @@
             <img class="img_nuage" src="/assets/nuage_bg.png" alt="Nuage img background">
 
             <figure class="figure_img">
-                <section class="medium__section">
-                    <figcaption class="figcaption_content">
+                <figcaption class="figcaption_content">
 
-                        <img src="/assets/requin.png" alt="image de robin le requin" class="img_requin">
-                        <div class="div_profil">
-                            <p class="para_profil">Matheo</p>
-                            <p class="para_profil">5 ans</p>
-                        </div>
-                    </figcaption>
-                </section>
+                    <img src="/assets/requin.png" alt="image de robin le requin" class="img_requin">
+                    <div class="div_profil">
+                        <p class="para_profil">Matheo</p>
+                        <p class="para_profil">5 ans</p>
+                    </div>
+                </figcaption>
             </figure>
         </section>
 
@@ -55,44 +53,7 @@
                 </li>
             </ul>
         </section>
-    </main> -->
-    <!-- <button id="btn-back"><img src="assets/arrow-back.svg" alt=""></button> -->
-
-    <main class="main">
-        <section class="section__title">
-            <section class="section__top">
-                <img src="/assets/logo_robin_le_requin.png" alt="img de robin le requin" class="img__accueil">
-            </section>
-
-            <img class="img_nuage" src="/assets/nuage_bg.png" alt="Nuage img background">
-
-            <figure class="figure_img">
-                <section class="medium__section">
-                    <img src="/assets/requin.png" alt="image de robin le requin" class="img_requin">
-                </section>
-                <figcaption class="figcaption_content">Tu souhaites te renseigner sur quoi Mathéo ?</figcaption>
-            </figure>
-        </section>
-
-        <section class="container" id="container"></section>
-
     </main>
-
-
-    <template id="template__info-cell">
-        <section data-id="{{id}}" class="cell">
-            <div class="cell_group">
-                <img class="img__cell" data-id="{{id}}" src="{{src}}" alt="logo info">
-            </div>
-            <p data-id="{{id}}">{{title}}</p>
-        </section>
-    </template>
-
-    <template id="template__info">
-        <h2 class="title_info">{{title}}</h2>
-        <p>{{info}}</p>
-    </template>
-
 
     <script src="script.js"></script>
 </body>
