@@ -3,13 +3,14 @@
     height: 100%;
 }
 
-.section__top {
+.info__section__top {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    z-index: 10;
 }
 
-.section__title {
+.info__section__title {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -18,7 +19,7 @@
     background-color: var(--color-bg-dark-blue);
 }
 
-.section__content {
+.info__section__content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,14 +40,14 @@
     z-index: 0;
 }
 
-.figure_img {
+.info__figure_img {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: .5rem;
 }
 
-.figcaption_content {
+.info__figcaption_content {
     position: relative;
     padding: 1.5rem .75rem;
     border-radius: 2.5rem;
@@ -57,12 +58,14 @@
     color: var(--color-text-black);
 }
 
-.figcaption_content::before {
+.info__figcaption_content::before {
     content: url('assets/languette_bulle.svg');
     position: absolute;
+    width: 2rem;
+    height: 2rem;
     top: 1rem;
     left: -1.25rem;
-    z-index: 1;
+    z-index: 0;
 }
 
 .medium__section {
@@ -76,16 +79,16 @@
     z-index: 10;
 }
 
-.container {
+.info__container {
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    top: 14rem;
+    top: 16rem;
     height: 100%;
     width: 100%;
-    padding-bottom: 5rem;
+    padding-bottom: 1rem;
 }
 
 .cell {
@@ -127,56 +130,10 @@
     margin-bottom: 2rem;
 }
 
-/* .div_profil {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: end;
+.info__section_main {
+    height: 100%;
+    background-color: var(--color-text-white);
 }
-
-.para_profil {
-    font-size: 2rem;
-    font-weight: bolder;
-}
-
-.ul__btns {
-    width: 100%;
-    height: 75%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.li__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: .5rem;
-    gap: 1rem;
-    border-radius: 20rem;
-    background-color: var(--color-bg-light-blue);
-    cursor: pointer;
-}
-
-.li__btn:hover {
-    box-shadow: 1px 1px 20px var(--color-bg-light-blue);
-}
-
-.div__svg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 49px;
-    height: 49px;
-    border-radius: 20rem;
-    padding: .5rem;
-    background-color: var(--color-bg-dark-blue);
-}
-
-.p__btn {
-    font-size: 1.25rem;
-    font-weight: 700;
-} */
 
 
 @media screen and (min-width: 600px) {

@@ -1,7 +1,21 @@
-.section__top {
+#qcm__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 1rem 2rem;
+    color: var(--color-text-white);
+}
+
+.qcm__section__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.qcm__section__title {
+    width: 100%;
 }
 
 .arrow {
@@ -25,33 +39,33 @@
     margin-top: .5rem;
 }
 
-.figure_img {
+.qcm__figure_img {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: .5rem;
 }
 
-.figcaption_content {
+.qcm__figcaption_content {
     position: relative;
     padding: 1.5rem .75rem;
     border-radius: 2.5rem;
     font-size: .75rem;
     text-align: center;
-    font-weight: 500;
+    font-weight: 700;
     background-color: var(--color-text-white);
     color: var(--color-text-black);
 }
 
-.figcaption_content::before {
+.qcm__figcaption_content::before {
     content: url('assets/languette_bulle.svg');
     position: absolute;
     top: 1rem;
     left: -1.25rem;
-    z-index: -1;
+    width: 2rem;
 }
 
-.medium__section {
+.qcm__medium__section {
     display: flex;
     justify-content: center;
     z-index: -2;
@@ -69,12 +83,6 @@
     flex-direction: column;
     gap: 1.5rem;
 }
-
-/* #qcm {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
 
 .qcm__li {
     width: 17.5rem;

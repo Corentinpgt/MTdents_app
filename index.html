@@ -14,7 +14,7 @@
 
     <!-- Start -->
     <template id="mainPage">
-        <section class="section__title">
+        <section class="main__section__title">
             <section class="section__top">
                 <img src="/assets/logo_robin_le_requin.png" alt="img de robin le requin" class="main__img__accueil">
                 <img src="/assets/logo_profil.svg" alt="img profil" class="main__img__accueil">
@@ -22,8 +22,8 @@
 
             <img class="main__img_nuage" src="/assets/nuage_bg.png" alt="Nuage img background">
 
-            <figure class="figure_img">
-                <figcaption class="figcaption_content">
+            <figure class="main__figure_img">
+                <figcaption class="main__figcaption_content">
 
                     <img src="/assets/requin.png" alt="image de robin le requin" class="main__img_requin">
                     <template id="profile">
@@ -35,9 +35,7 @@
             </figure>
         </section>
 
-        <button id="delete">Changer de compte</button>
-
-        <section class="section__content">
+        <section class="main__section__content">
             <ul class="ul__btns">
                 <li id="chrono" class="li__btn">
                     <div class="div__svg">
@@ -57,6 +55,12 @@
                     </div>
                     <p class="p__btn">Le quizz des dents</p>
                 </li>
+                <li class="li__btn delete" id="delete">
+                    <div class="div__svg div__delete">
+                        <img src="/assets/logo_profil.svg" alt="Svg Logo Dent">
+                    </div>
+                    <p class="p__btn">Changer de compte</p>
+                </li>
             </ul>
         </section>
     </template>
@@ -64,45 +68,43 @@
     <template id="loginPage">
 
         <img src="/assets/bg_nuage.png" alt="background img nuage" class="img_bgnuage">
-        <main class="main">
 
 
-            <section class="top__section">
-                <img src="/assets/logo_robin_le_requin.png" alt="Logo Robin le requin" class="img__accueil">
-                <img src="/assets/logo_mtdent.png" alt="Logo MTDent" class="img__accueil">
-            </section>
+        <section class="top__section">
+            <img src="/assets/logo_robin_le_requin.png" alt="Logo Robin le requin" class="img__accueil">
+            <img src="/assets/logo_mtdent.png" alt="Logo MTDent" class="img__accueil">
+        </section>
 
-            <h1 class="main__title">Bienvenue sur ton application préférée pour prendre soin de tes dents !</h1>
+        <h1 class="main__title">Bienvenue sur ton application préférée pour prendre soin de tes dents !</h1>
 
 
-            <section class="medium__section">
-                <div class="round_one">
-                    <div class="round_two">
-                        <div class="round_three">
-                            <img src="/assets/requin.png" alt="image de robin le requin" class="img_requin">
-                        </div>
+        <section class="medium__section">
+            <div class="round_one">
+                <div class="round_two">
+                    <div class="round_three">
+                        <img src="/assets/requin.png" alt="image de robin le requin" class="img_requin">
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="bottom__section">
-                <label for="age">Quel est ton age</label>
-                <select name="age" id="age">
-                    <option value="3">3 ans</option>
-                    <option value="4">4 ans</option>
-                    <option value="5">5 ans</option>
-                    <option value="6">6 ans</option>
-                    <option value="7">7 ans</option>
-                    <option value="8">8 ans</option>
-                    <option value="9">9 ans</option>
-                    <option value="10">10 ans</option>
-                    <option value="11">11 ans</option>
-                    <option value="12">12 ans</option>
-                </select>
-                <input id="name" type="text" placeholder="Quel est ton nom ?">
-                <button id="btn-createAccount" class="btn gold">Créer mon compte</button>
-            </section>
-        </main>
+        <section class="bottom__section">
+            <label for="age">Quel est ton age</label>
+            <select name="age" id="age">
+                <option value="3">3 ans</option>
+                <option value="4">4 ans</option>
+                <option value="5">5 ans</option>
+                <option value="6">6 ans</option>
+                <option value="7">7 ans</option>
+                <option value="8">8 ans</option>
+                <option value="9">9 ans</option>
+                <option value="10">10 ans</option>
+                <option value="11">11 ans</option>
+                <option value="12">12 ans</option>
+            </select>
+            <input id="name" type="text" placeholder="Quel est ton nom ?">
+            <button id="btn-createAccount" class="btn gold">Créer mon compte</button>
+        </section>
 
     </template>
 
@@ -159,8 +161,8 @@
         <div id="qcm__container"></div>
 
         <template id="qcm__template">
-            <section class="section__title">
-                <section class="section__top">
+            <section class="qcm__section__title">
+                <section class="qcm__section__top">
                     <span id="backArrow" class="arrow">&#60;</span>
                     <img src="/assets/logo_robin_le_requin.png" alt="img de robin le requin" class="img__accueil">
                 </section>
@@ -168,17 +170,11 @@
                 <h3 class="h3_sous_title">Question {{progression}}</h3>
             </section>
 
-            <figure class="figure_img">
-                <section class="medium__section">
-                    <div class="round_one">
-                        <div class="round_two">
-                            <div class="round_three">
-                                <img src="/assets/requin.png" alt="image de robin le requin" class="img_requin">
-                            </div>
-                        </div>
-                    </div>
+            <figure class="qcm__figure_img">
+                <section class="qcm__medium__section">
+                    <img src="/assets/requin.png" alt="image de robin le requin" class="img_requin">
                 </section>
-                <figcaption class="figcaption_content">{{question}}</figcaption>
+                <figcaption class="qcm__figcaption_content">{{question}}</figcaption>
             </figure>
 
             <section id="qcm">
@@ -214,26 +210,23 @@
 
     <template id="infoPage">
 
-        <main class="main">
-            <section class="section__title">
-                <section class="section__top">
+        <section class="info__section_main">
+            <section class="info__section__title">
+                <section class="info__section__top">
                     <span id="backArrow" class="arrow">&#60;</span>
                     <img src="/assets/logo_robin_le_requin.png" alt="img de robin le requin" class="img__accueil">
                 </section>
 
                 <img class="img_nuage" src="/assets/nuage_bg.png" alt="Nuage img background">
 
-                <figure class="figure_img">
-                    <section class="medium__section">
-                        <img src="/assets/requin.png" alt="image de robin le requin" class="img_requin">
-                    </section>
-                    <figcaption class="figcaption_content">Tu souhaites te renseigner sur quoi ?</figcaption>
+                <figure class="info__figure_img">
+                    <img src="/assets/requin.png" alt="image de robin le requin" class="img_requin">
+                    <figcaption class="info__figcaption_content">Tu souhaites te renseigner sur quoi ?</figcaption>
                 </figure>
             </section>
 
-            <section class="container" id="info__container"></section>
-
-        </main>
+            <section class="info__container" id="info__container"></section>
+        </section>
 
 
         <template id="template__info-cell">

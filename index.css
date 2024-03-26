@@ -4,3 +4,11 @@
 @import "style/qcm.css";
 @import "style/info.css";
 @import "style/main.css";
+
+#container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
