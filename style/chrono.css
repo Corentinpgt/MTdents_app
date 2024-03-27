@@ -6,7 +6,7 @@
     height: 100%;
 }
 
-.section__top {
+.chrono__section__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,10 +16,6 @@
     font-size: 3.5rem;
     font-weight: 500;
     color: var(--color-text-white);
-}
-
-.img__accueil {
-    width: 3rem;
 }
 
 .chrono__container {

@@ -1,24 +1,36 @@
+.section__login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 1rem 2rem;
+}
+
 .main__title {
+    font-size: 1.5rem;
     text-align: center;
     color: var(--color-text-white);
 }
 
-.top__section {
+.login__top__section {
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.img__accueil {
+.login__img__accueil {
     width: 6rem;
 }
 
-.medium__section {
+.login__medium__section {
     display: flex;
     justify-content: center;
 }
 
-.img_requin {
-    width: 19rem;
+.login__img_requin {
+    width: 16rem;
     z-index: 10;
 }
 
@@ -29,22 +41,31 @@
     gap: 1.5rem;
 }
 
+.login__input_name {
+    width: 100%;
+    padding: .5rem 0 .5rem 1rem;
+    border-radius: 22rem;
+    border: none;
+    font-family: "Fredoka", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 900;
+    box-shadow: inset 0px 3px 3px var(--color-text-login);
+}
+
+.login__input_name::placeholder {
+    color: var(--color-text-login);
+}
+
 .btn {
+    width: 100%;
     padding: 1rem 2rem;
     border-radius: 5rem;
     border: none;
     font-family: "Fredoka", sans-serif;
     font-weight: bolder;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--color-text-white);
     cursor: pointer;
-}
-
-.blue {
-    background-color: var(--color-bg-light-blue);
-}
-.blue:hover {
-    box-shadow: 1px 1px 20px var(--color-bg-light-blue);
 }
 
 .gold {
@@ -56,27 +77,27 @@
 
 .img_bgnuage {
     position: absolute;
-    top: 25%;
+    top: 5%;
     width: 100%;
     z-index: -1;
 }
 
 @media screen and (min-width: 500px) {
     .img_bgnuage {
-        top: 0;
+        top: -10rem;
     }
 
-    .img_requin {
-        width: 25rem;
+    .btn, .login__input_name {
+        width: 27rem;
     }
 }
 
 @media screen and (min-width: 768px) {
     .img_bgnuage {
-        top: -5rem;
+        top: -15rem;
     }
 
-    .img_requin {
-        width: 30rem;
+    .login__img_requin {
+        width: 20rem;
     }
 }

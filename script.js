@@ -45,9 +45,11 @@ function chronoPage() {
   }
 
   let chrono_btn = document.querySelector("#chrono__btn");
+  let chro = document.querySelector("#chrono__container");
 
   function handlerChrono() {
-    chrono_btn.style.display = "none";
+    chrono_btn.classList.add("chrono__btn_anim");
+    chro.classList.add("chrono__container_anim");
     chrono();
   }
 
@@ -57,8 +59,9 @@ function chronoPage() {
 
   function handlerCrossBtn() {
     let eltdisplay = document.querySelector("#chrono__end");
-    chrono_btn.style.display = "block";
     eltdisplay.classList.add("notview");
+    chrono_btn.classList.remove("chrono__btn_anim");
+    chro.classList.remove("chrono__container_anim");
     Chrono.time = 120;
   }
 

@@ -67,43 +67,39 @@
 
     <template id="loginPage">
 
-        <img src="/assets/bg_nuage.png" alt="background img nuage" class="img_bgnuage">
-
-
-        <section class="top__section">
-            <img src="/assets/logo_robin_le_requin.png" alt="Logo Robin le requin" class="img__accueil">
-            <img src="/assets/logo_mtdent.png" alt="Logo MTDent" class="img__accueil">
-        </section>
-
-        <h1 class="main__title">Bienvenue sur ton application préférée pour prendre soin de tes dents !</h1>
-
-
-        <section class="medium__section">
-            <div class="round_one">
-                <div class="round_two">
-                    <div class="round_three">
-                        <img src="/assets/requin.png" alt="image de robin le requin" class="img_requin">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="bottom__section">
-            <label for="age">Quel est ton age</label>
-            <select name="age" id="age">
-                <option value="3">3 ans</option>
-                <option value="4">4 ans</option>
-                <option value="5">5 ans</option>
-                <option value="6">6 ans</option>
-                <option value="7">7 ans</option>
-                <option value="8">8 ans</option>
-                <option value="9">9 ans</option>
-                <option value="10">10 ans</option>
-                <option value="11">11 ans</option>
-                <option value="12">12 ans</option>
-            </select>
-            <input id="name" type="text" placeholder="Quel est ton nom ?">
-            <button id="btn-createAccount" class="btn gold">Créer mon compte</button>
+        <section class="section__login">
+            <img src="/assets/bg_nuage.png" alt="background img nuage" class="img_bgnuage">
+    
+    
+            <section class="login__top__section">
+                <img src="/assets/logo_robin_le_requin.png" alt="Logo Robin le requin" class="img__accueil">
+                <img src="/assets/logo_mtdent.png" alt="Logo MTDent" class="login__img__accueil">
+            </section>
+    
+            <h1 class="main__title">Bienvenue sur ton application préférée pour prendre soin de tes dents !</h1>
+    
+    
+            <section class="login__medium__section">
+                <img src="/assets/requin.png" alt="image de robin le requin" class="login__img_requin">
+            </section>
+    
+            <section class="bottom__section">
+                <label for="age">Quel est ton age</label>
+                <select name="age" id="age">
+                    <option value="3">3 ans</option>
+                    <option value="4">4 ans</option>
+                    <option value="5">5 ans</option>
+                    <option value="6">6 ans</option>
+                    <option value="7">7 ans</option>
+                    <option value="8">8 ans</option>
+                    <option value="9">9 ans</option>
+                    <option value="10">10 ans</option>
+                    <option value="11">11 ans</option>
+                    <option value="12">12 ans</option>
+                </select>
+                <input class="login__input_name" id="name" type="text" placeholder="Prénom">
+                <button id="btn-createAccount" class="btn gold">Créer mon profil</button>
+            </section>
         </section>
 
     </template>
@@ -112,7 +108,7 @@
 
         <div id="chrono" class="chrono">
 
-            <section class="section__top">
+            <section class="chrono__section__top">
                 <span id="backArrow" class="arrow">&#60;</span>
                 <img src="/assets/logo_robin_le_requin.png" alt="img de robin le requin" class="img__accueil">
             </section>
@@ -217,10 +213,10 @@
                     <img src="/assets/logo_robin_le_requin.png" alt="img de robin le requin" class="img__accueil">
                 </section>
 
-                <img class="img_nuage" src="/assets/nuage_bg.png" alt="Nuage img background">
+                <img class="info__img_nuage" src="/assets/nuage_bg.png" alt="Nuage img background">
 
                 <figure class="info__figure_img">
-                    <img src="/assets/requin.png" alt="image de robin le requin" class="img_requin">
+                    <img src="/assets/requin.png" alt="image de robin le requin" class="info__img_requin">
                     <figcaption class="info__figcaption_content">Tu souhaites te renseigner sur quoi ?</figcaption>
                 </figure>
             </section>
@@ -239,7 +235,7 @@
         </template>
 
         <template id="template__info">
-            <span id="infoArrow" class="arrow">&#60;</span>
+            <span id="infoArrow" class="arrow__info">&#60;</span>
             <h2 class="title_info">{{title}}</h2>
             <p>{{info}}</p>
         </template>
